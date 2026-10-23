@@ -1,9 +1,10 @@
-import { describe, it } from "mocha";
+// import { describe, it } from "mocha";
 import { expect } from "chai";
+import isLength from "../src/isLength.js"
 
 describe("Example test cases", () => {
-    it("Handles 1+1", () => {
-        const result = 1+1;
-        expect(result).to.equal(2);
-    });
+    it("checks is length", () => {
+        expect(isLength(2)).to.equal(true);
+    })
 });
+
