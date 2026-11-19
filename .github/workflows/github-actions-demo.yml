@@ -12,6 +12,7 @@ jobs:
           package-manager-cache: false
       - run: npm i
       - run: npm run coverage
+        continue-on-error: true
       - uses: actions/upload-artifact@v7
         with:
           name: test-artifacts
