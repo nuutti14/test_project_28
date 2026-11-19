@@ -25,4 +25,5 @@ jobs:
         with:
           node-version: 24
           package-manager-cache: false
+      - run: npm i
       - run: npm test
