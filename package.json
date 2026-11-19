@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  
   "scripts": {
-    "test": "mocha",
-    "test:report": "mocha --reporter mochawesome",
-    "coverage": "c8 --check-coverage --lines 100 --reporter=text --reporter=html mocha --reporter mochawesome"
+    "test": "mocha --reporter mochawesome",
+    "test:cli": "mocha",
+    "coverage": "c8 --all --include=src/isLength.js --include=src/map.js --check-coverage --lines 95 --statements 95 --functions 95 --branches 95 --reporter=text --reporter=html npm run test"
   },
+
   "engine": {
     "node": ">=24"
   },

@@ -1,5 +1,5 @@
 // import { describe, it } from "mocha";
-import { expect } from "chai";
+import {expect} from "chai";
 import isLength from "../src/isLength.js"
 
 describe("Example test cases", () => {

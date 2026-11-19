@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-10-23T08:56:38.983Z",
-    "end": "2026-10-23T08:56:38.986Z",
-    "duration": 3,
+    "start": "2026-10-30T10:37:57.706Z",
+    "end": "2026-10-30T10:37:57.708Z",
+    "duration": 2,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "318943a4-3c5e-4009-8c44-b0d8b0542d9f",
+      "uuid": "5f2bf288-af8c-434a-bf3b-3bb6ef16526f",
       "title": "",
       "fullFile": "/Users/nutukoira/testing/test_project_28/test/useless.test.js",
       "file": "/test/useless.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3f48625d-41c1-486a-b65a-3073d9787f54",
+          "uuid": "6794a122-d697-4299-a6f8-58f65ef31bd1",
           "title": "Example test cases",
           "fullFile": "/Users/nutukoira/testing/test_project_28/test/useless.test.js",
           "file": "/test/useless.test.js",
@@ -38,7 +38,7 @@
               "title": "checks is length",
               "fullTitle": "Example test cases checks is length",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "expect(isLength(2)).to.equal(true);",
               "err": {},
-              "uuid": "e053d236-9f92-423a-bae8-c8a119c6d917",
-              "parentUUID": "3f48625d-41c1-486a-b65a-3073d9787f54",
+              "uuid": "0f966688-e3ee-4eae-a32a-f816d0760690",
+              "parentUUID": "6794a122-d697-4299-a6f8-58f65ef31bd1",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e053d236-9f92-423a-bae8-c8a119c6d917"
+            "0f966688-e3ee-4eae-a32a-f816d0760690"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 0,
+          "duration": 1,
           "root": false,
           "rootEmpty": false,
           "_timeout": 5000
