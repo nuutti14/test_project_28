@@ -12,4 +12,4 @@ jobs:
           package-manager-cache: false
       - run: npm i
       - run: npm test
-      - run: npm coverage
+      - run: npm run coverage
