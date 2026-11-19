@@ -8,7 +8,7 @@
   "scripts": {
     "test": "mocha --reporter mochawesome",
     "test:cli": "mocha",
-    "coverage": "c8 --all --include=src/isLength.js --include=src/map.js --check-coverage --lines 95 --statements 95 --functions 95 --branches 95 --reporter=text --reporter=html npm run test"
+    "coverage": "c8 --all --include=src/isLength.js --include=src/map.js --check-coverage --lines 95 --statements 95 --functions 95 --branches 95 --reporter=text --reporter=lcov --reporter=html npm run test"
   },
 
   "engine": {
