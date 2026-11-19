@@ -20,6 +20,9 @@ jobs:
         
       - name: Coveralls
         uses: coverallsapp/github-action@v2
+        with:
+          path-to-lcov:
+            coverage/lcov.info
         
       - uses: actions/upload-artifact@v7
         if: always()
