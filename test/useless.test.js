@@ -1,10 +1,10 @@
 // import { describe, it } from "mocha";
 import {expect} from "chai";
-import isLength from "../src/isLength.js"
+import isEmpty from "../src/isEmpty.js"
 
 describe("Example test cases", () => {
     it("checks is length", () => {
-        expect(isLength(2)).to.equal(true);
+        expect(isEmpty([])).to.equal(true);
     })
 });
 

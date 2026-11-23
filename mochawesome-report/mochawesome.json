@@ -5,8 +5,8 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-10-30T10:37:57.706Z",
-    "end": "2026-10-30T10:37:57.708Z",
+    "start": "2026-11-23T10:04:02.928Z",
+    "end": "2026-11-23T10:04:02.930Z",
     "duration": 2,
     "testsRegistered": 1,
     "passPercent": 100,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5f2bf288-af8c-434a-bf3b-3bb6ef16526f",
+      "uuid": "ade1c2e3-a563-4cf7-9e5e-090fe3c2d56e",
       "title": "",
       "fullFile": "/Users/nutukoira/testing/test_project_28/test/useless.test.js",
       "file": "/test/useless.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6794a122-d697-4299-a6f8-58f65ef31bd1",
+          "uuid": "9501d67c-af24-4b0c-b18b-a8474cec7d18",
           "title": "Example test cases",
           "fullFile": "/Users/nutukoira/testing/test_project_28/test/useless.test.js",
           "file": "/test/useless.test.js",
@@ -38,29 +38,29 @@
               "title": "checks is length",
               "fullTitle": "Example test cases checks is length",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "expect(isLength(2)).to.equal(true);",
+              "code": "expect(isEmpty([])).to.equal(true);",
               "err": {},
-              "uuid": "0f966688-e3ee-4eae-a32a-f816d0760690",
-              "parentUUID": "6794a122-d697-4299-a6f8-58f65ef31bd1",
+              "uuid": "2dd3a316-d120-46be-b8fd-68197ae08019",
+              "parentUUID": "9501d67c-af24-4b0c-b18b-a8474cec7d18",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "0f966688-e3ee-4eae-a32a-f816d0760690"
+            "2dd3a316-d120-46be-b8fd-68197ae08019"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1,
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 5000
