@@ -1,20 +1,24 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} is testing out GitHub Actions
 on: [push]
 jobs:
   Node-Tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout repository
+        uses: actions/checkout@v7
       
-      - uses: actions/setup-node@v7
+      - name: Install node
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           package-manager-cache: false
-          
-      - run: npm i
       
-      - run: npm run coverage
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Execute tests
+        run: npm run coverage
         id: run_tests
         continue-on-error: true
         
@@ -23,8 +27,9 @@ jobs:
         with:
           path-to-lcov:
             coverage/lcov.info
-        
-      - uses: actions/upload-artifact@v7
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: test-artifacts

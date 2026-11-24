@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 6,
-    "tests": 12,
-    "passes": 12,
+    "suites": 7,
+    "tests": 14,
+    "passes": 13,
     "pending": 0,
-    "failures": 0,
-    "start": "2026-11-24T12:47:24.049Z",
-    "end": "2026-11-24T12:47:24.054Z",
-    "duration": 5,
-    "testsRegistered": 12,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2026-11-24T18:53:38.168Z",
+    "end": "2026-11-24T18:53:38.174Z",
+    "duration": 6,
+    "testsRegistered": 14,
+    "passPercent": 92.85714285714286,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "48862ada-0200-4904-9d8a-e9bedd3faab7",
+      "uuid": "e8aaf1e5-a279-4b1c-992a-f0882c64f914",
       "title": "",
       "fullFile": "/Users/nutukoira/testing/test_project_28/test/filter.test.js",
       "file": "/test/filter.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5d700320-5bcf-455b-94e7-d43d49f0627a",
+          "uuid": "31ff8ac3-9472-49f2-a135-2d55869a174a",
           "title": "filter",
           "fullFile": "/Users/nutukoira/testing/test_project_28/test/filter.test.js",
           "file": "/test/filter.test.js",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "fa4029c2-8547-4f80-8cae-88bfeaa49acb",
+              "uuid": "72c9bd70-01d0-4329-8e26-ef0f40d83691",
               "title": "Normal functionality",
               "fullFile": "/Users/nutukoira/testing/test_project_28/test/filter.test.js",
               "file": "/test/filter.test.js",
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "expect(filter([2, 3, 5, 3], ((value) => value >= 3 ))).\n    to.deep.equal([3,5,3]);",
                   "err": {},
-                  "uuid": "67f38ec3-20af-4e5a-82a4-6a4aa4d50fa5",
-                  "parentUUID": "fa4029c2-8547-4f80-8cae-88bfeaa49acb",
+                  "uuid": "b78ef127-9683-42da-b5ed-4bed59d65aa7",
+                  "parentUUID": "72c9bd70-01d0-4329-8e26-ef0f40d83691",
                   "isHook": false,
                   "skipped": false
                 },
@@ -74,8 +74,8 @@
                   "context": null,
                   "code": "expect(filter([6, 2, 5], ((value) => value >= 3 ))).to.have.ordered.\nmembers([6, 5]).but.not.have.ordered.members([5, 6]);",
                   "err": {},
-                  "uuid": "1ea51a2c-c57f-4227-9b90-dfb2592d447c",
-                  "parentUUID": "fa4029c2-8547-4f80-8cae-88bfeaa49acb",
+                  "uuid": "99f2794f-cf2a-4a34-a7b7-0faad8b4e2d8",
+                  "parentUUID": "72c9bd70-01d0-4329-8e26-ef0f40d83691",
                   "isHook": false,
                   "skipped": false
                 },
@@ -92,17 +92,17 @@
                   "context": null,
                   "code": "expect(filter([1, 2, 2], (value) => value >= 3))\n    .to.deep.equal([[]]);",
                   "err": {},
-                  "uuid": "da82bb8d-3b77-4b87-9715-134c88d98f42",
-                  "parentUUID": "fa4029c2-8547-4f80-8cae-88bfeaa49acb",
+                  "uuid": "f8cee3f6-3cd5-4c91-97ec-c3875f0e10ed",
+                  "parentUUID": "72c9bd70-01d0-4329-8e26-ef0f40d83691",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "67f38ec3-20af-4e5a-82a4-6a4aa4d50fa5",
-                "1ea51a2c-c57f-4227-9b90-dfb2592d447c",
-                "da82bb8d-3b77-4b87-9715-134c88d98f42"
+                "b78ef127-9683-42da-b5ed-4bed59d65aa7",
+                "99f2794f-cf2a-4a34-a7b7-0faad8b4e2d8",
+                "f8cee3f6-3cd5-4c91-97ec-c3875f0e10ed"
               ],
               "failures": [],
               "pending": [],
@@ -113,7 +113,70 @@
               "_timeout": 5000
             },
             {
-              "uuid": "83e4f0d1-b7af-45fb-a0df-0fb5a5dd350e",
+              "uuid": "d84f53d3-94ad-4b44-837c-9b44cb358dbe",
+              "title": "Wrong input types",
+              "fullFile": "/Users/nutukoira/testing/test_project_28/test/filter.test.js",
+              "file": "/test/filter.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should return empty array when input is something else than array",
+                  "fullTitle": "filter Wrong input types should return empty array when input is something else than array",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "expect(filter(\"hello\", (value) => value >= 3)).to.deep.equal([[]]);",
+                  "err": {},
+                  "uuid": "5bad39f6-ed91-44ab-975c-bebee0f214d8",
+                  "parentUUID": "d84f53d3-94ad-4b44-837c-9b44cb358dbe",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should handle predicate being empty",
+                  "fullTitle": "filter Wrong input types should handle predicate being empty",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "expect(filter([2], )).to.deep.equal([[]]);",
+                  "err": {
+                    "message": "TypeError: predicate is not a function",
+                    "estack": "TypeError: predicate is not a function\n    at filter (file:///Users/nutukoira/testing/test_project_28/src/filter.js:32:9)\n    at Context.<anonymous> (file:///Users/nutukoira/testing/test_project_28/test/filter.test.js:32:20)\n    at process.processImmediate (node:internal/timers:574:21)",
+                    "diff": null
+                  },
+                  "uuid": "cd1fb207-6f2f-42d8-bf21-bee208d0f882",
+                  "parentUUID": "d84f53d3-94ad-4b44-837c-9b44cb358dbe",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5bad39f6-ed91-44ab-975c-bebee0f214d8"
+              ],
+              "failures": [
+                "cd1fb207-6f2f-42d8-bf21-bee208d0f882"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 5000
+            },
+            {
+              "uuid": "ac94c2dd-bc83-47de-9e7c-3e868f965a8b",
               "title": "Predicate behavior",
               "fullFile": "/Users/nutukoira/testing/test_project_28/test/filter.test.js",
               "file": "/test/filter.test.js",
@@ -133,8 +196,8 @@
                   "context": null,
                   "code": "const calls = [];\nfilter([2, 3, 5, 3], (value) => {\n    calls.push(value);\n    return value >= 3;\n});\nexpect(calls).to.deep.equal([2, 3, 5, 3]);",
                   "err": {},
-                  "uuid": "b9b27153-6a60-4eb4-b356-9153c131fc8f",
-                  "parentUUID": "83e4f0d1-b7af-45fb-a0df-0fb5a5dd350e",
+                  "uuid": "a4b3ae93-4583-4ca5-a963-af1bd2573e52",
+                  "parentUUID": "ac94c2dd-bc83-47de-9e7c-3e868f965a8b",
                   "isHook": false,
                   "skipped": false
                 },
@@ -151,16 +214,16 @@
                   "context": null,
                   "code": "let callCount = 0;\nfilter([2, 3, 5, 3], (value) => {\n    callCount++;\n    return value >= 3;\n});\nexpect(callCount).to.equal(4);",
                   "err": {},
-                  "uuid": "0837458e-3e28-4cb9-b82f-6fb767884342",
-                  "parentUUID": "83e4f0d1-b7af-45fb-a0df-0fb5a5dd350e",
+                  "uuid": "df4e6351-a75d-4c66-a6ce-8551c4e68789",
+                  "parentUUID": "ac94c2dd-bc83-47de-9e7c-3e868f965a8b",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "b9b27153-6a60-4eb4-b356-9153c131fc8f",
-                "0837458e-3e28-4cb9-b82f-6fb767884342"
+                "a4b3ae93-4583-4ca5-a963-af1bd2573e52",
+                "df4e6351-a75d-4c66-a6ce-8551c4e68789"
               ],
               "failures": [],
               "pending": [],
@@ -171,7 +234,7 @@
               "_timeout": 5000
             },
             {
-              "uuid": "ce7882ab-4d76-49fa-9c1b-4f49960b6cbd",
+              "uuid": "b6f6aaf9-34bb-4a98-87e7-7efe2a355b52",
               "title": "Edge cases",
               "fullFile": "/Users/nutukoira/testing/test_project_28/test/filter.test.js",
               "file": "/test/filter.test.js",
@@ -191,8 +254,8 @@
                   "context": null,
                   "code": "expect(filter([], ((value) => value >= 3 ))).to.deep.equal([[]]);",
                   "err": {},
-                  "uuid": "0fdbd8e7-4e3a-4ccd-a06e-0c6b88d5e0a0",
-                  "parentUUID": "ce7882ab-4d76-49fa-9c1b-4f49960b6cbd",
+                  "uuid": "06524fdf-9940-40df-ab45-0d8cbfc82ade",
+                  "parentUUID": "b6f6aaf9-34bb-4a98-87e7-7efe2a355b52",
                   "isHook": false,
                   "skipped": false
                 },
@@ -209,8 +272,8 @@
                   "context": null,
                   "code": "expect(filter(null, ((value) => value >= 3 ))).to.deep.equal([[]]);",
                   "err": {},
-                  "uuid": "8868ea23-7312-4833-8e0f-9f9ab8338b6f",
-                  "parentUUID": "ce7882ab-4d76-49fa-9c1b-4f49960b6cbd",
+                  "uuid": "19672d9e-6126-49af-aa32-d61f7a307f6f",
+                  "parentUUID": "b6f6aaf9-34bb-4a98-87e7-7efe2a355b52",
                   "isHook": false,
                   "skipped": false
                 },
@@ -227,8 +290,8 @@
                   "context": null,
                   "code": "expect(filter([5], ((value) => value >= 3 ))).to.deep.equal([5]);",
                   "err": {},
-                  "uuid": "a314b5ea-62cf-4176-8ee1-9b0c71ca917e",
-                  "parentUUID": "ce7882ab-4d76-49fa-9c1b-4f49960b6cbd",
+                  "uuid": "1ba22a4e-58a9-4df8-994e-49e7c417913a",
+                  "parentUUID": "b6f6aaf9-34bb-4a98-87e7-7efe2a355b52",
                   "isHook": false,
                   "skipped": false
                 },
@@ -245,18 +308,18 @@
                   "context": null,
                   "code": "expect(filter([0, false, null, 1, undefined],\n    (value) => Boolean(value)))\n    .to.deep.equal([1]);",
                   "err": {},
-                  "uuid": "6295c300-1ae9-467c-bd9b-5addbd6debc4",
-                  "parentUUID": "ce7882ab-4d76-49fa-9c1b-4f49960b6cbd",
+                  "uuid": "2be42c8f-1e42-4ad9-a8c2-0eaa16434d52",
+                  "parentUUID": "b6f6aaf9-34bb-4a98-87e7-7efe2a355b52",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "0fdbd8e7-4e3a-4ccd-a06e-0c6b88d5e0a0",
-                "8868ea23-7312-4833-8e0f-9f9ab8338b6f",
-                "a314b5ea-62cf-4176-8ee1-9b0c71ca917e",
-                "6295c300-1ae9-467c-bd9b-5addbd6debc4"
+                "06524fdf-9940-40df-ab45-0d8cbfc82ade",
+                "19672d9e-6126-49af-aa32-d61f7a307f6f",
+                "1ba22a4e-58a9-4df8-994e-49e7c417913a",
+                "2be42c8f-1e42-4ad9-a8c2-0eaa16434d52"
               ],
               "failures": [],
               "pending": [],
@@ -267,7 +330,7 @@
               "_timeout": 5000
             },
             {
-              "uuid": "2fcc8a97-3c06-4467-b36d-bd7eec5b31e4",
+              "uuid": "d5f11489-4e1c-4c79-8756-67ce439edbf7",
               "title": "Different data types",
               "fullFile": "/Users/nutukoira/testing/test_project_28/test/filter.test.js",
               "file": "/test/filter.test.js",
@@ -287,8 +350,8 @@
                   "context": null,
                   "code": "expect(filter([\"software\", \"testing\", \"test report\"],\n    (value) => value.startsWith(\"t\")))\n    .to.deep.equal([\"testing\", \"test report\"]);",
                   "err": {},
-                  "uuid": "3cefe663-c141-4b0a-af6c-f8743aef4281",
-                  "parentUUID": "2fcc8a97-3c06-4467-b36d-bd7eec5b31e4",
+                  "uuid": "b03c024e-8275-45ff-91e2-72c84f9cbb6b",
+                  "parentUUID": "d5f11489-4e1c-4c79-8756-67ce439edbf7",
                   "isHook": false,
                   "skipped": false
                 },
@@ -305,16 +368,16 @@
                   "context": null,
                   "code": "const students = [\n    {name: \"Nuutti\", age: 28},\n    {name: \"Antto\", age: 25}\n]\nexpect(filter(students, (student) => student.age >= 18))\n    .to.deep.equal([\n        {name: \"Nuutti\", age: 28},\n        {name: \"Antto\", age: 25}\n    ]);",
                   "err": {},
-                  "uuid": "b38becf0-7697-45d1-959c-7c1734268ed3",
-                  "parentUUID": "2fcc8a97-3c06-4467-b36d-bd7eec5b31e4",
+                  "uuid": "e25ffcb1-cb4b-49a1-bf14-47a0c4e9b1c9",
+                  "parentUUID": "d5f11489-4e1c-4c79-8756-67ce439edbf7",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "3cefe663-c141-4b0a-af6c-f8743aef4281",
-                "b38becf0-7697-45d1-959c-7c1734268ed3"
+                "b03c024e-8275-45ff-91e2-72c84f9cbb6b",
+                "e25ffcb1-cb4b-49a1-bf14-47a0c4e9b1c9"
               ],
               "failures": [],
               "pending": [],
@@ -325,7 +388,7 @@
               "_timeout": 5000
             },
             {
-              "uuid": "013e90a8-43a9-49a2-a635-f66ffb4d93a7",
+              "uuid": "b97e00cf-3e00-42dc-aed6-fb03f5fd0130",
               "title": "Input immutability",
               "fullFile": "/Users/nutukoira/testing/test_project_28/test/filter.test.js",
               "file": "/test/filter.test.js",
@@ -345,15 +408,15 @@
                   "context": null,
                   "code": "const original = [1, 2, 3];\nfilter(original, (value) => value >= 2);\nexpect(original).to.deep.equal([1, 2, 3]);",
                   "err": {},
-                  "uuid": "39811393-e219-47ae-983d-146f4bfe1386",
-                  "parentUUID": "013e90a8-43a9-49a2-a635-f66ffb4d93a7",
+                  "uuid": "cddb83cb-7995-4867-8fb5-4a048e06b3ae",
+                  "parentUUID": "b97e00cf-3e00-42dc-aed6-fb03f5fd0130",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "39811393-e219-47ae-983d-146f4bfe1386"
+                "cddb83cb-7995-4867-8fb5-4a048e06b3ae"
               ],
               "failures": [],
               "pending": [],

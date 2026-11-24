@@ -3,6 +3,7 @@ import {expect} from "chai";
 import filter from "../src/filter.js"
 
 describe("filter", () => {
+
     describe("Normal functionality", () => {
 
         it("should filter elements based on predicate", () => {
@@ -20,6 +21,17 @@ describe("filter", () => {
                 .to.deep.equal([[]]);
         });
     }); 
+
+    describe("Wrong input types", () => {
+
+        it("should return empty array when input is something else than array", () => {
+            expect(filter("hello", (value) => value >= 3)).to.deep.equal([[]]);
+        });
+
+        it("should handle predicate being empty", () => {
+            expect(filter([2], )).to.deep.equal([[]]);
+        });
+    })
 
 
     describe("Predicate behavior", () => {
