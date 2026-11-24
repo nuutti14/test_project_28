@@ -34,8 +34,7 @@ jobs:
         with:
           name: test-artifacts
           path: |
-            mochawesome-report/mochawesome.json
-            mochawesome-report/mochawesome.html
+            mochawesome-report/
             coverage/
             
       - name: Check Test Status
